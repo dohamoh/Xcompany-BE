@@ -17,6 +17,10 @@ import cors  from "cors"
 import * as indexRouter from './src/module/index.router.js'
 app.use(bodyParser.urlencoded({extended : false}));
 app.use(bodyParser.json())
+var corsOption = {
+    origin: "*",
+    optionsSuccessStatus: 200
+}
 app.use(cors("*"))
 const port = process.env.PORT
 app.use(express.static('public'));
